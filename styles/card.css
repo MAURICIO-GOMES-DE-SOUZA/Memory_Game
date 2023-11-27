@@ -42,6 +42,7 @@ font-size: clamp(0.8rem, 1.2vw, 1.6rem);
 
 .card:hover {
     cursor: pointer;
+    transform: rotateY(180deg);
 }
 
 .flipCard {
