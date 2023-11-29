@@ -54,7 +54,7 @@ function createCards() {
 function checkGameWin() {
   const disabledCards = document.querySelectorAll(".disabledCard");
 
-  if (disabledCards.length === 2) {
+  if (disabledCards.length === 24) {
     clearInterval(finishTimerInterval);
 
     const userDate = {
@@ -64,7 +64,6 @@ function checkGameWin() {
 
     const storageRank = JSON.parse(localStorage.getItem("@memoryGame:rank"))
     if(storageRank) {
-      console.log(storageRank);
       const rankData = [...storageRank, userDate]
       localStorage.setItem("@memoryGame:rank", JSON.stringify( rankData));
 
