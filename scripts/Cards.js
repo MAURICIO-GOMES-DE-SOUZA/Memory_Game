@@ -64,7 +64,7 @@ function checkGameWin() {
 
     const storageRank = JSON.parse(localStorage.getItem("@memoryGame:rank"))
     if(storageRank) {
-      const rankData = [...storageRank, userDate]
+      const rankData = [userDate,...storageRank]
       localStorage.setItem("@memoryGame:rank", JSON.stringify( rankData));
 
     } else {
